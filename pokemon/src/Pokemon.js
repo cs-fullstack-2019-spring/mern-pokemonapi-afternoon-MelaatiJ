@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import './App.css';
+
 
 class Pokemon extends Component {
     constructor(props) {
@@ -48,8 +50,8 @@ class Pokemon extends Component {
             }
         );
         return (
-            <div>
-                <h1>{dataMap}</h1>
+            <div className={"grid"}>
+                {dataMap}
             </div>
         );
     }
