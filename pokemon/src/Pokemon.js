@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 
 class Pokemon extends Component {
@@ -39,12 +41,16 @@ class Pokemon extends Component {
         let dataMap = tempArray.map(
             (eachPokemon, index) => {
                 return (
-                    <div>
-                        <img src={index+1 +".png"}/>
-                        {/*<img src="/1.png"/>*/}
-                        <h3>{eachPokemon.name}</h3>
+                    <div className={"card"} style={{ width: 18+"rem"}}>
+
+                        <img src={index+1 +".png"} className={"card-img-top"}/>
+                        <div className={"card-body"}>
+                            <h3 className={"card-text"}>{eachPokemon.name}</h3>
+                        </div>
+
 
                     </div>
+
                 )
 
             }
